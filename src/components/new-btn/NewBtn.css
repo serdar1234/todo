@@ -1,0 +1,9 @@
+.new-btn {
+  padding: 10px;
+}
+
+.new-btn button {
+  width: 100%;
+  height: 31px;
+  font-weight: bold;
+}
