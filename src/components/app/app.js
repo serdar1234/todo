@@ -67,7 +67,9 @@ export default class App extends Component {
   }
 
   toggleImportant = (id) => {
-    console.log("tog imp", id)
+    this.setState(({todoData}) => {
+      return {todoData: this.toggleProperty("important", id, todoData)}
+    })
   }
 
   render() {
