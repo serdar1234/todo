@@ -17,15 +17,17 @@ export default class ToDoListItem extends Component {
     } )
   }
 
-  onExclamation() {
-    this.setState( (state) => {
-      return {important: !state.important}
-    } )
-  }
+  // onExclamation() {
+  //   this.setState( (state) => {
+  //     return {important: !state.important}
+  //   } )
+  // }
 
   render() {
     let { done, important } = this.state;
-    const { label, onDeleted } = this.props;
+    const { label, onDeleted,
+      onDone, onImportant
+     } = this.props;
     let classNames = "todo-list-item";
 
     if (done)       classNames += " done";
@@ -35,12 +37,12 @@ export default class ToDoListItem extends Component {
       <span className= { classNames }>
         <span
           className="todo-list-item-label"
-          onClick={ () => this.onLabelClick()}>
+          onClick={ onDone}>
           {label}
         </span>
   
         <button type="button"
-          onClick={ () => this.onExclamation() } className="btn btn-outline-success btn-sm float-right">
+          onClick={ onImportant } className="btn btn-outline-success btn-sm float-right">
           <i className="fa fa-exclamation" />
         </button>
   
