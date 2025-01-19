@@ -16,8 +16,10 @@ export default class NewBtn extends Component {
 
   onFormSubmit = (evt) => {
     evt.preventDefault();
-    this.onCreate(this.state.userInput);
-    this.setState({userInput: ""})
+    if (this.state.userInput) {
+      this.onCreate(this.state.userInput);
+      this.setState({userInput: ""})
+    }
   }
 
   render() {
