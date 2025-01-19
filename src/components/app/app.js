@@ -16,6 +16,7 @@ export default class App extends Component {
       { label: 'Nothing', important: false, id: 3 }
     ]
   }
+  minID = 100;
 
   deleteItem = (id) => {
     this.setState(({todoData}) => {
@@ -29,7 +30,19 @@ export default class App extends Component {
   }
 
   createItem = () => {
-    console.log("hi")
+    const newItem = {
+      label: `Brand new item ${this.minID + 1}`,
+      important: false,
+      id: this.minID++
+    }
+    this.setState(({todoData}) => {
+      return {
+        todoData: [
+          ...todoData,
+          newItem
+        ]
+      }
+    })
   }
 
   render() {
@@ -45,7 +58,7 @@ export default class App extends Component {
           todos={this.state.todoData}
           onDeleted={this.deleteItem}
            />
-        <NewBtn onCreate={this.createItem} />
+        <NewBtn onCreate={() => this.createItem()} />
       </div>
     );
   }
