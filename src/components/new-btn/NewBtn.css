@@ -1,9 +1,10 @@
 .new-btn {
-  padding: 10px;
+  padding-block-start: 16px;
 }
 
 .new-btn button {
-  width: 100%;
-  height: 31px;
+  width: 20%;
+  margin-left: 3px;
+  height: 38px;
   font-weight: bold;
 }

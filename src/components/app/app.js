@@ -46,8 +46,8 @@ export default class App extends Component {
     })
   }
   
-  addItem = () => {
-    const newItem = this.makeItem(`Brand new item ${this.minID + 1}`)
+  addItem = (itemName) => {
+    const newItem = this.makeItem(itemName)
     this.setState(({todoData}) => {
       return {
         todoData: [
@@ -91,7 +91,7 @@ export default class App extends Component {
           onDone={this.toggleDone}
           onImportant={this.toggleImportant}
            />
-        <NewBtn onCreate={() => this.addItem()} />
+        <NewBtn onCreate={(txt) => this.addItem(txt)} />
       </div>
     );
   }
