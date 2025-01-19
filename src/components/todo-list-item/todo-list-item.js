@@ -3,29 +3,14 @@ import React, { Component } from 'react';
 import './todo-list-item.css';
 
 export default class ToDoListItem extends Component {
-  constructor() {
-    super();
-    this.state = {
-      done: false,
-      important: false
-    }
-  }
-
   onLabelClick() {
     this.setState( ({done}) => {
       return {done: !done}
     } )
   }
 
-  // onExclamation() {
-  //   this.setState( (state) => {
-  //     return {important: !state.important}
-  //   } )
-  // }
-
   render() {
-    let { done, important } = this.state;
-    const { label, onDeleted,
+    const { label, onDeleted, done, important,
       onDone, onImportant
      } = this.props;
     let classNames = "todo-list-item";
