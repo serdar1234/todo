@@ -4,7 +4,7 @@ import './NewBtn.css'
 
 export default class NewBtn extends Component {
   state = {
-    userInput: ''
+    userInput: ""
   }
   onCreate = this.props.onCreate;
 
@@ -27,12 +27,12 @@ export default class NewBtn extends Component {
       <form className="new-btn d-flex"
       onSubmit={this.onFormSubmit}>
         <input type="text" className="form-control"
-        onChange={this.onInputChange}
-        value={this.state.userInput}
-        placeholder="new to-do task" />
+          onChange={this.onInputChange}
+          value={this.state.userInput}
+          placeholder="new to-do task" />
         <button type="submit" 
-        className="btn btn-outline-warning btn-sm float-right"
-        >Add me</button>
+          className="btn btn-outline-warning btn-sm float-right"
+        >Add</button>
       </form>
     )
   }
