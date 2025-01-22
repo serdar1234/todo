@@ -18,7 +18,7 @@ export default class App extends Component {
       // this.makeItem('Nothing!')
     ],
     term: '',
-    filter: '0' // all = 0, active = 1, done = 2
+    filter: 0 // all = 0, active = 1, done = 2
   }
 
   makeItem(label) {
