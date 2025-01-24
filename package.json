@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "lint-staged": "^12.3.2",
     "prettier": "^3.4.2"
   },
@@ -34,7 +35,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"src/**/*.{js,jsx,css,md}\""
+    "lint-staged": "lint-staged",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,md}\"",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
