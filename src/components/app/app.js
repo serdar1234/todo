@@ -102,9 +102,6 @@ export default class App extends Component {
     }
   }
 
-  testFn() {
-    console.log('test test');
-  }
   render() {
     const { todoData, term, filter } = this.state;
     const visibleItems = this.filter(this.search(todoData, term), filter);

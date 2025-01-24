@@ -55,5 +55,8 @@ module.exports = {
         moduleDirectory: ['node_modules', 'src/'],
       },
     },
+    'react': { 
+      'version': 'detect' 
+    },
   },
 };
