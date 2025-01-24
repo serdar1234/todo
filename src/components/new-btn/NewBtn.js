@@ -33,10 +33,7 @@ export default class NewBtn extends Component {
           value={this.state.userInput}
           placeholder="new to-do task"
         />
-        <button
-          type="submit"
-          className="btn btn-outline-warning btn-sm float-right"
-        >
+        <button type="submit" className="btn btn-outline-warning btn-sm float-right">
           Add
         </button>
       </form>

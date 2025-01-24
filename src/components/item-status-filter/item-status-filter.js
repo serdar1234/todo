@@ -14,12 +14,7 @@ const ItemStatusFilter = ({ filter, onFilterChange }) => {
     const isActive = filter === code;
     const btnExtraStyle = isActive ? 'btn-info' : 'btn-outline-secondary';
     return (
-      <button
-        type="button"
-        className={`btn ${btnExtraStyle}`}
-        key={code}
-        onClick={() => onFilterChange(code)}
-      >
+      <button type="button" className={`btn ${btnExtraStyle}`} key={code} onClick={() => onFilterChange(code)}>
         {label}
       </button>
     );

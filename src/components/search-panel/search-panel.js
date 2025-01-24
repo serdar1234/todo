@@ -18,11 +18,6 @@ export default function SearchPanel({ onSearch }) {
   };
 
   return (
-    <input
-      type="text"
-      className="form-control search-input"
-      placeholder="type to search"
-      onChange={onSearchChange}
-    />
+    <input type="text" className="form-control search-input" placeholder="type to search" onChange={onSearchChange} />
   );
 }

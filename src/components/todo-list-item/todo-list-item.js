@@ -16,19 +16,11 @@ function ToDoListItem(props) {
         {label}
       </span>
 
-      <button
-        type="button"
-        onClick={onImportant}
-        className="btn btn-outline-success btn-sm float-right"
-      >
+      <button type="button" onClick={onImportant} className="btn btn-outline-success btn-sm float-right">
         <i className="fa fa-exclamation" />
       </button>
 
-      <button
-        type="button"
-        onClick={onDeleted}
-        className="btn btn-outline-danger btn-sm float-right"
-      >
+      <button type="button" onClick={onDeleted} className="btn btn-outline-danger btn-sm float-right">
         <i className="fa fa-trash-o" />
       </button>
     </span>
