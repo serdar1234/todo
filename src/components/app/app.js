@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+
 import TodoList from '../todo-list';
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import ItemStatusFilter from '../item-status-filter';
 import NewBtn from '../new-btn/NewBtn';
-
 import './app.css';
 
 export default class App extends Component {
-  minID = 100;
   state = {
     todoData: [
       // Test todos
@@ -20,14 +19,15 @@ export default class App extends Component {
     filter: 0, // all = 0, active = 1, done = 2
   };
 
-  makeItem(label) {
-    return {
-      label,
-      done: false,
-      important: false,
-      id: ++this.minID,
-    };
-  }
+  minID = 100;
+
+  onSearchChange = (term) => {
+    this.setState({ term });
+  };
+
+  onFilterChange = (filter) => {
+    this.setState({ filter });
+  };
 
   toggleProperty = (propName, id, arr) => {
     const idx = arr.findIndex((item) => item.id === id);
@@ -72,6 +72,16 @@ export default class App extends Component {
     });
   };
 
+  makeItem(label) {
+    this.minID += 1;
+    return {
+      label,
+      done: false,
+      important: false,
+      id: this.minID,
+    };
+  }
+
   search(items, term) {
     if (!term.length) return items;
     return items.filter((item) => {
@@ -91,13 +101,6 @@ export default class App extends Component {
         return items;
     }
   }
-
-  onSearchChange = (term) => {
-    this.setState({ term });
-  };
-  onFilterChange = (filter) => {
-    this.setState({ filter });
-  };
 
   render() {
     const { todoData, term, filter } = this.state;

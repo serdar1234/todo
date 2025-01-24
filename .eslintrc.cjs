@@ -6,10 +6,10 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'plugin:react/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -19,11 +19,12 @@ module.exports = {
   },
   plugins: ['react', 'prettier', 'import'],
   rules: {
+    'class-methods-use-this': ['error', { 'enforceForClassFields': false }],
     indent: ['error', 2],
     'prettier/prettier': 'error',
     'linebreak-style': [0, 'unix'],
     quotes: ['error', 'single'],
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [
       2,

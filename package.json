@@ -11,6 +11,8 @@
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.26.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@eslint/js": "^9.18.0",
     "eslint": "^8.57.1",
@@ -22,6 +24,7 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "globals": "^15.14.0",
+    "lint-staged": "^12.3.2",
     "prettier": "^3.4.2"
   },
   "scripts": {
